@@ -66,10 +66,11 @@ export default function LoginPage() {
   const Icon = config.icon
 
   return (
-    <div className={`min-h-screen ${config.shell}`}>
-      <NavbarShell />
-      <main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <section className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch">
+    <div className="min-h-screen flex flex-col bg-white">
+      <div className={`flex-1 ${config.shell}`}>
+        <NavbarShell />
+        <main className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+          <section className="grid gap-8 lg:grid-cols-[0.88fr_1.12fr] lg:items-stretch">
           <div className={`rounded-[2rem] p-8 ${config.side}`}>
             <Icon className="h-8 w-8" />
             <h1 className="mt-5 text-4xl font-semibold tracking-[-0.05em]">{config.title}</h1>
@@ -97,7 +98,8 @@ export default function LoginPage() {
             </div>
           </div>
         </section>
-      </main>
+        </main>
+      </div>
       <Footer />
     </div>
   )
